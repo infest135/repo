@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<script>
+    console.log('////////////////')
+    console.log('Первое задание');
+    var a = 1, b = 1, c, d; // Объявили переменные a,b,c,d. a и b задали значение 1, c и d просто объявили (undefined).
+    c = ++a;
+    console.log(c); // 2 получается запись вида a = a + 1; c = a 
+    d = b++;
+    console.log(d); // 1 получается запись вида d = b; b = b + 1
+    c = (2 + ++a);
+    console.log(c); // 5 получается запись вида a = a + 1; c = 2 + a; при этом a = 2 (увеличили счётчик на 1 в прошлом выражении)
+    d = (2 + b++);
+    console.log(d); // 4 получается запись вида d = 2+ b; b = b + 1; при этом b = 2 (увеличили счётчик на 1 в прошлом выражении)
+    console.log(a); // 3  как бы то ни было мы увеличивали эти числа по счётчику три раза от 1 до 3, независимо от того, где располагались ++ (++a, a++)
+    console.log; // 3
+    console.log('////////////////')
+    console.log('второе задание');
+    var a = 2;
+    var x = 1 + (a *= 2) // a = a * 2; x = 1 + a; в итоге x = 5
+    console.log(x);
+    console.log('////////////////')
+    console.log('третье задание');
+    for (var i = 0; i <= 100; i++) {
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+            console.log('FizzBuzz')
+        }
+        else if (i % 5 == 0) {
+            console.log('Buzz');
+        }
+        else if (i % 3 == 0) {
+            console.log('Fizz');
+        }
+        else {
+            console.log(i);
+        }
+    }
+</script>

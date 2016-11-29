@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script>
+    function min(a, b) {
+        if (a > b) {
+            return b;
+        } else {
+            return a;
+        }
+    }
+    while (true) {
+        var a = prompt('Введите число а. q to exit');
+        y = isNaN(a);
+        if (a == "q") {
+            break;
+        } else if ((y == true) || (a == "")) {
+            alert("Введите число! " + a);
+    } else {
+        var b = prompt('Введите число b');
+        y = isNaN(b);
+        if (b == "q") {
+            break;
+        } else if ((y == true) || (b == "")) {
+            alert("Введите число! " + b);
+        } else {
+            alert(min(a, b));
+        }
+    }
+    }
+    
+    function check(a, b) {
+        y = isNan(a) || isNaN(b);
+    }
+</script>

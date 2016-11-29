@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+    var b = 0;
+
+    function countBs(string) {
+        for (var i = 0; i < string.length; i++) {
+            if (string.charAt(i) === "В" || string.charAt(i) === "B" || string.charAt(i) === "в" || string.charAt(i) === "b") {
+                b += 1;
+            }
+        }
+    }
+    while (true) {
+        var string = prompt('Введите ваш текст.\nPress q to exit');
+        if (string == "q") {
+            break;
+        } else {
+            countBs(string);
+            alert('Кол-во букв "B" = ' + b);
+            b = 0;
+        }
+    }
+</script>
